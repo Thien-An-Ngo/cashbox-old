@@ -3,16 +3,18 @@ import * as React from "react";
 export interface IHelloProps
 {
     name: string;
+    count: number;
+    onClick: () =>  void;
 }
 
-export class Hello extends React.Component<IHelloProps, {}>
+export function Hello(props: IHelloProps)
 {
-    public render(): JSX.Element
-    {
-        return (
-            <>
-                <h3>Oh hey - {this.props.name}</h3>
-            </>
-        );
-    }
+    const {name,  count, onClick} = props;
+    return (
+        <>
+            <h3>Oh hey - {name}</h3>
+            <h1 onClick={() => onClick()}>Number: {count}</h1>
+        </>
+    );
+
 }
