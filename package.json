@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development parcel src/index.html --out-dir build/debug",
-    "build": "parcel build src/index.html --out-dir build/release --public-url ./",
+    "build": "parcel build NODE_ENV=development src/index.html --out-dir build/release --public-url ./",
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll"
   },
