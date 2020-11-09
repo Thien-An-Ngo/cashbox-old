@@ -1,0 +1,20 @@
+{
+  "wg": "7.1",
+  "transactions": [
+    {
+      "date": "2020.10.01",
+      "member": "Thien An",
+      "amount": 10.00
+    },
+    {
+      "date": "2020.10.01",
+      "member": "Julius",
+      "amount": 10.00
+    },
+    {
+      "date": "2020.10.01",
+      "member": "Jacob",
+      "amount": 10.00
+    }
+  ]
+}

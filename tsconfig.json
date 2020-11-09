@@ -8,7 +8,9 @@
           "dom",
           "es5",
           "es6"
-      ]
+      ],
+      "resolveJsonModule": true,
+      "allowSyntheticDefaultImports": true
   },
   "include": [
       "src/**/*"
