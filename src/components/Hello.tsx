@@ -1,6 +1,7 @@
 import * as React from "react";
 import {useEffect, useState} from "react";
 import Config from "../config";
+import { Button } from "react-bootstrap";
 
 export interface IHelloProps {
   name: string;
@@ -26,10 +27,8 @@ export function Hello(props: IHelloProps) {
   const fetchTransactions = () => {
     try {
       fetch(`${Config.apiDomainUrl}/api/cashbox/73`,{method: 'GET'})
-        .then(response => response.json())
-        .then(json => {
-          setTransaction(json.transactions);
-        });
+        .then(response => {return response.json()})
+        .then(json => {setTransaction(json.transactions)});
     } catch (error) {
       console.log('error: ', error);
     }
@@ -66,6 +65,7 @@ export function Hello(props: IHelloProps) {
       <h1 onClick={() => onClick()}>Number: {count}</h1>
       <h4>Transactions:</h4>
       {genTransactions()}
+      <Button>Hello!</Button>
     </>
   );
 

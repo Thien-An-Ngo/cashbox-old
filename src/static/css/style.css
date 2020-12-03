@@ -1,0 +1,25 @@
+.text-jade {
+    color: #00A36C !important;
+}
+
+.bg-jade {
+    background-color: #00A36C;
+    color: #fff;
+}
+
+.text-ruby {
+    color: #E0115F !important;
+}
+
+.bg-ruby {
+    background-color: #E0115F;
+    color: #fff;
+}
+
+.text-mauve {
+    color: #E0B0FF !important;
+}
+
+.bg-mauve {
+    background-color: #E0B0FF;
+}
