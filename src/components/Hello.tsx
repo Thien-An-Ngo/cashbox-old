@@ -26,9 +26,9 @@ export function Hello(props: IHelloProps) {
 
   const fetchTransactions = () => {
     try {
-      fetch(`${Config.apiDomainUrl}/api/cashbox/73`,{method: 'GET'})
-        .then(response => {return response.json()})
-        .then(json => {setTransaction(json.transactions)});
+      // fetch(`${Config.apiDomainUrl}/api/cashbox/73`,{method: 'GET'})
+      //   .then(response => {return response.json()})
+      //   .then(json => {setTransaction(json.transactions)});
     } catch (error) {
       console.log('error: ', error);
     }
