@@ -19,46 +19,46 @@ export function Hello(props: IHelloProps) {
   const {name, count, onClick} = props;
   const [transactions, setTransaction] = useState<[TransItem]>();
 
-  // https://reactjs.org/docs/hooks-intro.html
-  // useEffect(  () => {
-  //   fetchTransactions();
-  // }, []);
+  https://reactjs.org/docs/hooks-intro.html
+  useEffect(  () => {
+    fetchTransactions();
+  }, []);
 
-  // const fetchTransactions = () => {
-  //   try {
-  //     fetch(`${Config.apiDomainUrl}/api/cashbox/73`,{method: 'GET'})
-  //       .then(response => {return response.json()})
-  //       .then(json => {setTransaction(json.transactions)});
-  //   } catch (error) {
-  //     console.log('error: ', error);
-  //   }
-  // }
+  const fetchTransactions = () => {
+    try {
+      fetch(`${Config.apiDomainUrl}/api/cashbox/73`,{method: 'GET'})
+        .then(response => {return response.json()})
+        .then(json => {setTransaction(json.transactions)});
+    } catch (error) {
+      console.log('error: ', error);
+    }
+  }
 
-  // const genTransactions = () => {
-  //   if (transactions) {
-  //     return (
-  //       <table>
-  //         <thead>
-  //           <tr>
-  //             <th>Date</th>
-  //             <th>Name</th>
-  //             <th>Amount</th>
-  //           </tr>
-  //         </thead>
-  //         <tbody>{
-  //           transactions.map((item, index) => (
-  //             <tr key={index}>
-  //               <td>{item.date}</td>
-  //               <td>{item.member}</td>
-  //               <td>{item.amount}</td>
-  //             </tr>
-  //           ))
-  //         }
-  //         </tbody>
-  //       </table>
-  //     )
-  //   }
-  // }
+  const genTransactions = () => {
+    if (transactions) {
+      return (
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>{
+            transactions.map((item, index) => (
+              <tr key={index}>
+                <td>{item.date}</td>
+                <td>{item.member}</td>
+                <td>{item.amount}</td>
+              </tr>
+            ))
+          }
+          </tbody>
+        </table>
+      )
+    }
+  }
   return (
     <>
       <h3>Oh hey - {name}</h3>
