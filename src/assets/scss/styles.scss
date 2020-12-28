@@ -1,0 +1,41 @@
+@import '~bootstrap/scss/bootstrap';
+
+$jade: #00A36C;
+$ruby: #E0115F;
+$mauve: #E0B0FF;
+
+body {
+    font-family: TabletGothic, Helvetica Neue, Helvetica, Arial, FreeSans, sans-serif;
+}
+
+.text-jade {
+    color: $jade !important;
+}
+
+.bg-jade {
+    background-color: $jade;
+    color: white;
+}
+
+.text-ruby {
+    color: $ruby !important;
+}
+
+.bg-ruby {
+    background-color: $ruby;
+    color: white;
+}
+
+.text-mauve {
+    color: $mauve !important;
+}
+
+.bg-mauve {
+    background-color: $mauve;
+}
+
+.my-sticky {
+    // position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}

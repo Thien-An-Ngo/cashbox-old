@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Hello } from "./components/Hello";
 import { Navbar } from "./components/Navbar"
+import './App.scss';
 
 export function App() {
     let count = 0;
@@ -11,9 +12,12 @@ export function App() {
     }
     return (
       <>
-        <Navbar />
-        <div className="container">
-          <Hello name={appName} count={count} onClick={handleClick} />
+        <div className={"cashbox-app"}>
+          <Navbar />
+          <div className="container mycontainer">
+            <Hello name={appName} count={count} onClick={handleClick} />
+          </div>
+          <div className="window-height"></div>
         </div>
       </>
     );
